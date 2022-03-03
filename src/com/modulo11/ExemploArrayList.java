@@ -1,7 +1,6 @@
 package com.modulo11;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,8 +10,19 @@ public class ExemploArrayList {
 
         exemploListaSimples();
         exemploListaSimplesOrdemAscendente();
+        exemploNumero();
 
     }
+
+    private static void exemploNumero() {
+        System.out.println("*** exemploNumero ***");
+        List<Integer> numeros = new ArrayList<>();
+        numeros.add(1);
+        numeros.add(2);
+        numeros.add(3);
+        System.out.println(numeros);
+    }
+
 
     private static void exemploListaSimples() {
         System.out.println("*** exemploListaSimples ***");
@@ -28,10 +38,12 @@ public class ExemploArrayList {
         System.out.println("*** exemploListaSimplesOrdemAscendente ***");
         List<String> lista = new ArrayList<>();
         lista.add("Jeferson");
-        lista.add("Juliana");
-        lista.add("Julia");
+        lista.add("André");
+        lista.add("Bruno");
         Collections.sort(lista);
         System.out.println(lista);
         System.out.println("");
     }
+
+
 }
