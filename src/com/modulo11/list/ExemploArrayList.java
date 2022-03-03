@@ -1,4 +1,4 @@
-package com.modulo11;
+package com.modulo11.list;
 
 import java.util.ArrayList;
 import java.util.Collections;
