@@ -11,6 +11,10 @@ public class ExemploPriorityQueue {
         queue.add("short");
         queue.add("very long indeed");
         queue.add("medium");
+        queue.add("Anderson");
+        queue.add("Jefersson");
+        queue.add("Cleberson");
+        queue.add("Bruna");
         while (queue.size() != 0) {
             System.out.println(queue.remove());
         }
