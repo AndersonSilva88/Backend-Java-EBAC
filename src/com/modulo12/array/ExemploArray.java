@@ -1,4 +1,4 @@
-package com.modulo12;
+package com.modulo12.array;
 
 public class ExemploArray {
 
@@ -42,7 +42,7 @@ public class ExemploArray {
 
         for (int linha = 0; linha < array.length; linha++) {
             for (int coluna = 0; coluna < array[linha].length; coluna++){
-                System.out.printf("%d", array[linha][coluna]);
+                System.out.printf("| %d | ", array[linha][coluna]);
             }
             System.out.println();
         }
