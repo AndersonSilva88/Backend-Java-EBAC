@@ -16,10 +16,11 @@ public class ExemploTreeMap {
     private static void exemploListaSimplesIterandoChaves() {
         System.out.println("******** exemploListaSimplesIterandoChaves() ********");
         Map<Integer, String> lista = new TreeMap<>();
-        lista.put(1, "Anderson");
+        lista.put(1, "Bruna");
         lista.put(2, "Cleberson");
-        lista.put(3, "Lúcia");
-        lista.put(4, "Joao");
+        lista.put(3, "Anderson");
+        lista.put(4, "Lúcia");
+        lista.put(5, "Joao");
 
         for (Integer value : lista.keySet()) {
             System.out.println(value);
@@ -29,10 +30,11 @@ public class ExemploTreeMap {
     private static void exemploListaSimplesIterandoValores() {
         System.out.println("******** exemploListaSimplesIterandoValores *******");
         Map<Integer, String> lista = new TreeMap<>();
-        lista.put(1, "Anderson");
+        lista.put(1, "Bruna");
         lista.put(2, "Cleberson");
-        lista.put(3, "Lúcia");
-        lista.put(4, "Joao");
+        lista.put(3, "Anderson");
+        lista.put(4, "Lúcia");
+        lista.put(5, "Joao");
 
         for (String value: lista.values()) {
             System.out.println(value);
@@ -44,10 +46,11 @@ public class ExemploTreeMap {
     private static void exemploListaSimples() {
         System.out.println("******** exemploListaSimples *******");
         Map<Integer, String> lista = new TreeMap<>();
-        lista.put(1, "Anderson");
+        lista.put(1, "Bruna");
         lista.put(2, "Cleberson");
-        lista.put(3, "Lúcia");
-        lista.put(4, "Joao");
+        lista.put(3, "Anderson");
+        lista.put(4, "Lúcia");
+        lista.put(5, "Joao");
 
         System.out.println(lista);
         System.out.println("");
