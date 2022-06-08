@@ -39,11 +39,35 @@ public class Main {
                 String dados = JOptionPane.showInputDialog(null, "Digite o CPF",
                         "Consultar", JOptionPane.INFORMATION_MESSAGE);
                 consultar(dados);
+            } else if (isExclusao(opcao)) {
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite o CPF do Cliente ",
+                        "Consultar Informações: ", JOptionPane.INFORMATION_MESSAGE);
+                excluir(dados);
+            } else {
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite os dados do cliente separados por vírgula, conforme exemplo: " +
+                                "Nome, CPF, Telefone, Endereço, Número, Cidade e Estado", "Atualização," +
+                                JOptionPane.INFORMATION_MESSAGE);
+                atualizar(dados);
             }
+
 
             opcao = JOptionPane.showInputDialog(null, "1 - Cadastro \n2 - Consultar\n" +
                     "3 - Exclusao\n4 - Alterar\n5 - Sair", "TELA DE CADASTRO", JOptionPane.INFORMATION_MESSAGE);
         }
+    }
+
+    private static void atualizar(String dados) {
+        String[] dadosSeparados = dados.split(",");
+        Cliente cliente = new Cliente(dadosSeparados[0],dadosSeparados[1],dadosSeparados[2],dadosSeparados[3],dadosSeparados[4],dadosSeparados[5],dadosSeparados[6]);
+        iClienteDAO.alterar(cliente);
+    }
+
+    private static void excluir(String dados) {
+        iClienteDAO.excluir(Long.parseLong(dados));
+        JOptionPane.showMessageDialog(null, "Cliente excluido com sucesso: ",
+                "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private static void consultar(String dados) {
@@ -59,12 +83,6 @@ public class Main {
 
     }
 
-    private static boolean isConsultar(String opcao) {
-        if ("2".equals(opcao)) {
-            return true;
-        }
-        return false;
-    }
 
     private static void cadastrar(String dados) {
         String[] dadosSeparados = dados.split(",");
@@ -77,6 +95,20 @@ public class Main {
             JOptionPane.showMessageDialog(null, "Cliente já Cadastrado", "Erro",
                     JOptionPane.INFORMATION_MESSAGE);
         }
+    }
+
+    private static boolean isExclusao(String opcao) {
+        if ("3".equals(opcao)) {
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean isConsultar(String opcao) {
+        if ("2".equals(opcao)) {
+            return true;
+        }
+        return false;
     }
 
     private static boolean isCadastro(String opcao) {
