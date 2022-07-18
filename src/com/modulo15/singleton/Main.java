@@ -1,4 +1,6 @@
-package com.modulo15;
+package com.modulo15.singleton;
+
+import com.modulo15.singleton.SimgletonPropriedade;
 
 public class Main {
 

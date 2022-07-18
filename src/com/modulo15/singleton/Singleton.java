@@ -1,4 +1,4 @@
-package com.modulo15;
+package com.modulo15.singleton;
 
 public class Singleton {
 
