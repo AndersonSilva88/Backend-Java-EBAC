@@ -1,14 +1,21 @@
 package com.modulo17.generics;
 
-public class GenericEntry<T> {
+public class GenericEntry<T, E> {
 
     private T data;
 
-    public GenericEntry(T data) {
+    private E codigo;
+
+    public GenericEntry(T data, E codigo) {
         this.data = data;
+        this.codigo = codigo;
     }
 
     public T getData() {
         return this.data;
+    }
+
+    public E getCodigo() {
+        return this.codigo;
     }
 }
