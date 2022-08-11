@@ -6,22 +6,21 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class cla = Produto.class;
-        System.out.println(cla);
+        //System.out.println(cla);
 
         Produto prod = new Produto();
         Class clss = prod.getClass();
-        System.out.println(clss);
+        //System.out.println(clss);
 
         Constructor cons = cla.getConstructor();
         Produto prod1 = (Produto) cons.newInstance();
-        System.out.println(cons);
-        System.out.println(prod1);
+        //System.out.println(cons);
+        //System.out.println(prod1);
 
         Field[] fields = prod1.getClass().getDeclaredFields();
         for (Field field : fields) {
@@ -31,7 +30,7 @@ public class Main {
             System.out.println(nome);
         }
 
-        Method[] Method = prod1.getClass().getDeclaredMethods();
+       Method[] Method = prod1.getClass().getDeclaredMethods();
         for (Method m : Method) {
             Class<?> type = m.getReturnType();
             String nome = m.getName();
