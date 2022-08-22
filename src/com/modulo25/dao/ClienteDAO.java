@@ -3,7 +3,9 @@ package com.modulo25.dao;
 import com.modulo25.dao.generics.GenericDAO;
 import com.modulo25.domain.Cliente;
 
-public class ClienteDAO extends GenericDAO<Cliente> implements IClienteDAO {
+import java.io.Serializable;
+
+public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO {
     @Override
     public void salvar(Cliente cliente) {
 
@@ -20,6 +22,11 @@ public class ClienteDAO extends GenericDAO<Cliente> implements IClienteDAO {
     }
 
     @Override
+    public void excluir(String cpf) {
+
+    }
+
+    @Override
     public void alterar(Cliente cliente) {
 
     }
@@ -31,6 +38,11 @@ public class ClienteDAO extends GenericDAO<Cliente> implements IClienteDAO {
 
     @Override
     public void atualizarDados(Cliente entity, Cliente entityCadastrado) {
+
+    }
+
+    @Override
+    public void excluir(Serializable valor) {
 
     }
 }
