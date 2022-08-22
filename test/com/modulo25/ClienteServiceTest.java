@@ -35,9 +35,7 @@ public class ClienteServiceTest {
 
     @Test
     public void pesquisarCliente() {
-
         Cliente clienteConsultado = clienteService.buscarPorCpf(cliente.getCpf());
-
         Assert.assertNotNull(clienteConsultado);
     }
 
@@ -49,5 +47,12 @@ public class ClienteServiceTest {
     @Test
     public void excluirCliente() {
         clienteService.excluir(cliente.getCpf());
+    }
+
+    @Test
+    public void alterarCliente() {
+        cliente.setNome("Anderson");
+        clienteService.alterar(cliente);
+        Assert.assertEquals("Anderson", cliente.getNome());
     }
 }
